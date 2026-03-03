@@ -1,34 +1,331 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* CLOR MAISON - Custom Styles */
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--alabaster);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
+.hero-logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    color: var(--charcoal);
+}
+
+.hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    letter-spacing: 0.15em;
+    color: var(--charcoal-muted);
+}
+
+/* Bento Gallery Grid */
+.bento-gallery {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .bento-gallery {
+        gap: 1.5rem;
     }
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
+.bento-item {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--alabaster-secondary);
+}
+
+.bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-item:hover img {
+    transform: scale(1.08);
+}
+
+.bento-item-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+
+.bento-item:hover .bento-item-overlay {
+    opacity: 1;
+}
+
+/* Bento item sizes */
+.bento-large {
+    grid-column: span 12;
+    aspect-ratio: 16/10;
+}
+
+.bento-medium {
+    grid-column: span 6;
+    aspect-ratio: 4/5;
+}
+
+.bento-small {
+    grid-column: span 4;
+    aspect-ratio: 1;
+}
+
+@media (min-width: 768px) {
+    .bento-large {
+        grid-column: span 8;
+        aspect-ratio: 4/3;
+    }
+    
+    .bento-medium {
+        grid-column: span 4;
+        aspect-ratio: 4/5;
+    }
+    
+    .bento-small {
+        grid-column: span 4;
+        aspect-ratio: 1;
+    }
+}
+
+/* Service Item */
+.service-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(166, 124, 82, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    padding-left: 1rem;
+    border-bottom-color: var(--gold);
+}
+
+.service-item:hover .service-name {
+    color: var(--gold);
+}
+
+.service-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.service-price {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    color: var(--gold);
+    font-size: 1rem;
+}
+
+/* Contact Button */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--charcoal);
+    color: var(--alabaster);
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background-color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px rgba(166, 124, 82, 0.4);
+}
+
+.contact-btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--charcoal);
+    color: var(--charcoal);
+}
+
+.contact-btn-secondary:hover {
+    background-color: var(--charcoal);
+    color: var(--alabaster);
+}
+
+/* WhatsApp floating button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--charcoal);
+    color: var(--alabaster);
+    padding: 4rem 0;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.3em;
+    color: var(--alabaster);
+}
+
+/* Section transitions */
+.section-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Decorative elements */
+.decorative-line {
+    width: 60px;
+    height: 1px;
+    background-color: var(--gold);
+}
+
+/* Image placeholder loading */
+.image-loading {
+    background: linear-gradient(90deg, var(--alabaster-secondary) 0%, var(--alabaster) 50%, var(--alabaster-secondary) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Navigation */
+.nav-link {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--charcoal-secondary);
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--charcoal);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.5rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-10px); }
+    60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* Mobile menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--alabaster);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
 }
 
-.App-link {
-    color: #61dafb;
+.mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.mobile-menu-link {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--charcoal);
+    transition: color 0.3s ease;
+}
+
+.mobile-menu-link:hover {
+    color: var(--gold);
 }
