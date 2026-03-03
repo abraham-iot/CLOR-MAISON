@@ -17,12 +17,15 @@ const galleryImages = [
 
 // Services data
 const services = [
-  { name: "Manicure Clásica", price: "Desde $15" },
-  { name: "Manicure Spa", price: "Desde $25" },
-  { name: "Uñas Acrílicas", price: "Desde $35" },
-  { name: "Uñas de Gel", price: "Desde $30" },
-  { name: "Nail Art Personalizado", price: "Desde $40" },
-  { name: "Pedicure Completo", price: "Desde $25" },
+  { name: "Uñas Acrílicas", price: "Desde $250" },
+  { name: "Uñas de Gel", price: "$150" },
+  { name: "Manicure", price: "$200" },
+  { name: "Pedicure Completo", price: "$300" },
+  { name: "Nail Art Personalizado", price: "$600" },
+  { name: "Lifting de Pestañas", price: "$300" },
+  { name: "Laminado de Ceja", price: "$350" },
+  { name: "Masaje Relajante", price: "$500" },
+  { name: "Acripié", price: "$400" },
 ];
 
 // WhatsApp Icon Component
