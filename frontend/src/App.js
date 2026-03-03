@@ -164,7 +164,7 @@ const HeroSection = () => {
         {/* CTA Button */}
         <Button
           onClick={() => {
-            window.open("https://wa.me/+1234567890?text=Hola,%20me%20gustaría%20agendar%20una%20cita", "_blank");
+            window.open("https://wa.me/522221812377?text=Hola,%20me%20gustaría%20agendar%20una%20cita", "_blank");
             toast.success("Redirigiendo a WhatsApp...");
           }}
           className="contact-btn animate-fade-in-up delay-400"
@@ -335,7 +335,7 @@ const ServicesSection = () => {
         <div className={`text-center mt-16 ${isVisible ? "animate-fade-in-up delay-600" : "opacity-0"}`}>
           <Button
             onClick={() => {
-              window.open("https://wa.me/+1234567890?text=Hola,%20me%20gustaría%20conocer%20más%20sobre%20sus%20servicios", "_blank");
+              window.open("https://wa.me/522221812377?text=Hola,%20me%20gustaría%20conocer%20más%20sobre%20sus%20servicios", "_blank");
               toast.success("Redirigiendo a WhatsApp...");
             }}
             className="contact-btn-secondary contact-btn"
@@ -414,14 +414,14 @@ const ContactSection = () => {
           <div className="text-center p-8 bg-white/50 backdrop-blur-sm" data-testid="contact-phone">
             <Phone className="w-6 h-6 mx-auto mb-4 text-[#A67C52]" />
             <h3 className="font-['Playfair_Display'] text-lg mb-2">Teléfono</h3>
-            <p className="font-['Manrope'] text-[#57534E]">+1 234 567 890</p>
+            <p className="font-['Manrope'] text-[#57534E]">222 181 2377</p>
           </div>
 
           {/* Location */}
           <div className="text-center p-8 bg-white/50 backdrop-blur-sm" data-testid="contact-location">
             <MapPin className="w-6 h-6 mx-auto mb-4 text-[#A67C52]" />
             <h3 className="font-['Playfair_Display'] text-lg mb-2">Ubicación</h3>
-            <p className="font-['Manrope'] text-[#57534E]">Calle Principal #123</p>
+            <p className="font-['Manrope'] text-[#57534E] text-sm">Privada 109 A Oriente 2422<br/>Barrio de San Juan</p>
           </div>
 
           {/* Hours */}
@@ -436,7 +436,7 @@ const ContactSection = () => {
         <div className={`text-center ${isVisible ? "animate-fade-in-up delay-400" : "opacity-0"}`}>
           <Button
             onClick={() => {
-              window.open("https://wa.me/+1234567890?text=Hola,%20me%20gustaría%20agendar%20una%20cita%20en%20CLOR%20MAISON", "_blank");
+              window.open("https://wa.me/522221812377?text=Hola,%20me%20gustaría%20agendar%20una%20cita%20en%20CLOR%20MAISON", "_blank");
               toast.success("Abriendo WhatsApp...");
             }}
             className="contact-btn bg-[#25D366] hover:bg-[#128C7E]"
@@ -470,7 +470,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex justify-center gap-6 mb-8">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/clor__maisonn?igsh=MTA3ODdoZ3VwMHg0OA=="
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#D4C5A9] hover:text-white transition-colors"
@@ -497,7 +497,7 @@ const Footer = () => {
 const WhatsAppFloat = () => {
   return (
     <a
-      href="https://wa.me/+1234567890?text=Hola,%20me%20gustaría%20agendar%20una%20cita"
+      href="https://wa.me/522221812377?text=Hola,%20me%20gustaría%20agendar%20una%20cita"
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-float"
