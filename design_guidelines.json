@@ -1,0 +1,155 @@
+{
+  "typography": {
+    "headings": {
+      "family": "Playfair Display, serif",
+      "weights": ["400", "600"],
+      "sizes": {
+        "h1": "text-5xl md:text-7xl tracking-tight",
+        "h2": "text-4xl md:text-5xl tracking-tight",
+        "h3": "text-2xl md:text-3xl tracking-normal",
+        "display": "text-[12vw] leading-[0.8] tracking-tighter opacity-10"
+      },
+      "usage": "Use for all section titles, hero text, and featured service names. Always strictly center-aligned or dramatically left-aligned."
+    },
+    "body": {
+      "family": "Manrope, sans-serif",
+      "weights": ["300", "400", "500"],
+      "sizes": {
+        "base": "text-base md:text-lg leading-relaxed",
+        "small": "text-sm tracking-wide opacity-80",
+        "caption": "text-xs tracking-[0.2em] uppercase font-semibold"
+      },
+      "usage": "Use for descriptions, pricing, and contact info."
+    },
+    "accent": {
+      "family": "Cormorant Garamond, serif",
+      "weights": ["400", "500"],
+      "style": "italic",
+      "usage": "Use for testimonials, 'signature' text, or decorative sub-labels."
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "primary": "#FAF9F6",
+        "secondary": "#F5F2EB",
+        "dark": "#1C1917"
+      },
+      "foreground": {
+        "primary": "#292524",
+        "secondary": "#57534E",
+        "muted": "#78716C",
+        "inverse": "#FAFAF9"
+      },
+      "brand": {
+        "primary": "#A67C52",
+        "secondary": "#D4C5A9",
+        "accent": "#9F5F5F"
+      },
+      "ui": {
+        "border": "#E7E5E4",
+        "input": "#F5F5F4",
+        "ring": "#A67C52"
+      }
+    },
+    "gradients": {
+      "hero_overlay": "linear-gradient(to bottom, rgba(250, 249, 246, 0) 0%, #FAF9F6 100%)",
+      "image_mask": "linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 100%)"
+    },
+    "usage_rules": [
+      "NO generic gradients.",
+      "Use 'Alabaster' (#FAF9F6) as the main canvas, not pure white.",
+      "Text should never be pure black (#000000); use 'Warm Charcoal' (#292524).",
+      "Brand accents should be used sparingly (buttons, prices, active states)."
+    ]
+  },
+  "visual_enhancers": {
+    "shadows": {
+      "card": "0 20px 40px -12px rgba(166, 124, 82, 0.12)",
+      "floating": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+      "inner": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.05)"
+    },
+    "borders": {
+      "soft": "1px solid rgba(166, 124, 82, 0.2)",
+      "glass": "1px solid rgba(255, 255, 255, 0.5)"
+    },
+    "radius": {
+      "button": "9999px",
+      "card": "0px",
+      "image": "0px"
+    },
+    "textures": {
+      "noise": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E\")"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-stone-800 text-stone-50 hover:bg-stone-700 rounded-full px-8 py-4 transition-all duration-300 hover:scale-[1.02]",
+      "secondary": "border border-stone-300 text-stone-800 hover:border-stone-800 hover:bg-stone-50 rounded-full px-8 py-4 transition-all duration-300",
+      "ghost": "text-stone-600 hover:text-stone-900 underline underline-offset-4 decoration-stone-300 hover:decoration-stone-900 transition-all"
+    },
+    "cards": {
+      "service": "bg-white p-8 hover:shadow-xl transition-all duration-500 group relative overflow-hidden",
+      "gallery_item": "relative overflow-hidden aspect-[4/5] group cursor-pointer"
+    },
+    "inputs": {
+      "default": "bg-transparent border-b border-stone-300 focus:border-stone-800 rounded-none px-0 py-4 outline-none transition-all placeholder:text-stone-400 font-light"
+    }
+  },
+  "layout_strategies": {
+    "grid_system": {
+      "gallery": "grid grid-cols-1 md:grid-cols-12 gap-4 auto-rows-[300px]",
+      "rules": [
+        "Use 'Bento' logic: Mix span-4, span-6, and span-8 items.",
+        "Never have 3 identical columns in a row.",
+        "Use generous gap-8 or gap-12 on desktop."
+      ]
+    },
+    "spacing": {
+      "section_y": "py-24 md:py-32",
+      "element_gap": "space-y-8"
+    }
+  },
+  "motion": {
+    "entrance": {
+      "fade_up": "opacity-0 translate-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out fill-mode-forwards",
+      "zoom_in": "opacity-0 scale-95 animate-in fade-in zoom-in-95 duration-700 ease-out"
+    },
+    "interactions": {
+      "hover_lift": "hover:-translate-y-1 hover:shadow-lg transition-transform duration-300",
+      "image_zoom": "group-hover:scale-105 transition-transform duration-700 ease-out"
+    }
+  },
+  "media": {
+    "image_urls": {
+      "hero_bg": "https://images.unsplash.com/photo-1657020812486-770835e71378?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwzfHxib3RhbmljYWwlMjBzaGFkb3clMjBvbiUyMGJlaWdlJTIwd2FsbCUyMGFlc3RoZXRpY3xlbnwwfHx8fDE3NzI1MTQyMjd8MA&ixlib=rb-4.1.0&q=85",
+      "about_bg": "https://images.unsplash.com/photo-1650532897813-d92427f7d229?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBzcGElMjBzYWxvbiUyMGludGVyaW9yJTIwYmVpZ2UlMjBnb2xkfGVufDB8fHx8MTc3MjUxNDIyNnww&ixlib=rb-4.1.0&q=85",
+      "user_gallery": [
+        "/image1.jpeg",
+        "/image2.jpeg",
+        "/image3.jpeg",
+        "/image4.jpeg",
+        "/image5.jpeg",
+        "/image6.jpeg"
+      ]
+    },
+    "treatment": "Images must have a subtle warmth filter (sepia: 5-10%) to match the 'Organic Luxury' theme. All gallery images should have a hover state that reveals the service name."
+  },
+  "instructions_to_main_agent": [
+    "1. THEME: Use the 'Organic Luxury' theme. Think 'Kinfolk Magazine' meets 'High-End Spa'. Minimal, breathing room, serif fonts.",
+    "2. IMAGES: The user has provided 6 images (/image1.jpeg to /image6.jpeg). These are the HEROES of the site. Use them prominently in the Gallery section.",
+    "3. HERO SECTION: Do NOT use a standard 'Image Right, Text Left'. Try a centered layout with the logo 'CLOR MAISON' huge, overlapping a central image.",
+    "4. CONTACT: Keep it simple. WhatsApp button is crucial for this business type.",
+    "5. FOOTER: Minimalist. 'CLOR MAISON' in large serif font at the bottom.",
+    "6. SHADOWS: Use soft, diffused shadows. No harsh black shadows.",
+    "7. ANIMATION: Use 'framer-motion' for scroll reveals. Text should slide up gently.",
+    "8. RESPONSIVE: Ensure the grid collapses beautifully to 1 column on mobile."
+  ],
+  "universal_guidelines": [
+    "Do not use gradients unless specified.",
+    "Use 2-3x more spacing than typical designs.",
+    "Every interaction needs micro-animations.",
+    "Use 'sonner' for toasts.",
+    "Components MUST use named exports."
+  ]
+}
